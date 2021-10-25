@@ -1,0 +1,34 @@
+apiVersion: v1
+data:
+  ca.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJlVENDQVIrZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWtNU0l3SUFZRFZRUUREQmx5YTJVeUxYTmwKY25abGNpMWpZVUF4TmpNME5qUXlOemN5TUI0WERUSXhNVEF4T1RFeE1qWXhNbG9YRFRNeE1UQXhOekV4TWpZeApNbG93SkRFaU1DQUdBMVVFQXd3WmNtdGxNaTF6WlhKMlpYSXRZMkZBTVRZek5EWTBNamMzTWpCWk1CTUdCeXFHClNNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJIZlFqVjRJUHdQNndKM1hmT3JzcDZ2QWxCc2x3cm9zcWpZUUp3ZlUKQlVrUkRXNWp6TzlWc3h6b0Vvei9URlZRNjRrQUw1Y1c2Z09PTW1GZmN0djg2SWlqUWpCQU1BNEdBMVVkRHdFQgovd1FFQXdJQ3BEQVBCZ05WSFJNQkFmOEVCVEFEQVFIL01CMEdBMVVkRGdRV0JCUi9Vam9TYTRBcUFmUEd0dWhXCjIyNzBvdmdmR0RBS0JnZ3Foa2pPUFFRREFnTklBREJGQWlBL3JmNzFvSEREbHNKTEZOVGZjRjJjcWx6MHJoeTAKUm1kQndJVWZHWlU4M2dJaEFOVW1IdmVVQ1FLbEVMWHdPTTI4cHlSLzZwUG50UW5uQ3ZqQ0NqTGtiUkw3Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+  namespace: ZGVmYXVsdA==
+  token: ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklqZ3ROek0yWlMxMFNrbHNibmx3VGt4TWQxVjJXRk5SUmtKdVdFNHdOM1ZmUkV0SWFuTm5iRTlITkZVaWZRLmV5SnBjM01pT2lKcmRXSmxjbTVsZEdWekwzTmxjblpwWTJWaFkyTnZkVzUwSWl3aWEzVmlaWEp1WlhSbGN5NXBieTl6WlhKMmFXTmxZV05qYjNWdWRDOXVZVzFsYzNCaFkyVWlPaUprWldaaGRXeDBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpXTnlaWFF1Ym1GdFpTSTZJbUZ1YzJsaWJHVXRZWGQ0TFhSdmEyVnVMV0pxT0hnMUlpd2lhM1ZpWlhKdVpYUmxjeTVwYnk5elpYSjJhV05sWVdOamIzVnVkQzl6WlhKMmFXTmxMV0ZqWTI5MWJuUXVibUZ0WlNJNkltRnVjMmxpYkdVdFlYZDRJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpYSjJhV05sTFdGalkyOTFiblF1ZFdsa0lqb2lNbUpqTm1ZMFpEWXRabUpsWmkwMFlqUTRMV0UyT0RNdFpEa3dZV0ZoWmpjeU1XSmlJaXdpYzNWaUlqb2ljM2x6ZEdWdE9uTmxjblpwWTJWaFkyTnZkVzUwT21SbFptRjFiSFE2WVc1emFXSnNaUzFoZDNnaWZRLmNRM1R0RjNMUl9hTF9lVWQtdGYtcEViMkwwRmJVZ3pWY1BVWk1rUHN4VElUS05xOUxlQU1KdWwxWUthTXUyMTg2bVZrS3lsQ2drWDJTT3gyeFNpWG9Tc09taER6dVVPZS11V0U3R25Yc044WmNyaThWU0VwYXdlNENnZDREbjl3cENGejAxdFJkSGFzM2xtclItbXMtQkZGOHptRGl0cW04U0lEU3hMbUFEcW5Sb3EzbWdvTEIzNW5RODdfZjdPT0diSml3WlJHR1VkZ1VCUGJtSF93QkxzU0RSYTVJQ3VOTmtTeXB6eGFJREJGbDFveEdoWWhLOVhzaFozVFJibkNsY0NtdjB4T044UDZNMi12alZxZzFXTFYzbFN5Ymk5dzNjUXJDNXJtNmQ5Sm1jUGY4Q2pZQXdIYktRVTRCWkEwOUt5aDFjNWNUZnBCY0dvemtTWHRGUQ==
+kind: Secret
+metadata:
+  annotations:
+    kubernetes.io/service-account.name: ansible-awx
+    kubernetes.io/service-account.uid: 2bc6f4d6-fbef-4b48-a683-d90aaaf721bb
+  creationTimestamp: "2021-10-25T23:22:00Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:ca.crt: {}
+        f:namespace: {}
+        f:token: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/service-account.name: {}
+          f:kubernetes.io/service-account.uid: {}
+      f:type: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2021-10-25T23:22:00Z"
+  name: ansible-awx-token-bj8x5
+  namespace: awx-namespace
+  resourceVersion: "2446006"
+  uid: 73410bfd-7179-4b2a-a03a-693016340093
+type: kubernetes.io/service-account-token

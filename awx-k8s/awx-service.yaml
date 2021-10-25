@@ -1,0 +1,96 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    field.cattle.io/publicEndpoints: '[{"addresses":["203.101.230.11"],"port":31999,"protocol":"TCP","serviceName":"default:ansible-awx-service","allNodes":true}]'
+    kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"v1","kind":"Service","metadata":{"labels":{"app.kubernetes.io/component":"awx","app.kubernetes.io/managed-by":"awx-operator","app.kubernetes.io/name":"ansible-awx","app.kubernetes.io/operator-version":"0.12.0","app.kubernetes.io/part-of":"ansible-awx"},"name":"ansible-awx-service","namespace":"awx-namespace"},"spec":{"ports":[{"name":"http","port":80,"protocol":"TCP","targetPort":8052}],"selector":{"app.kubernetes.io/component":"awx","app.kubernetes.io/managed-by":"awx-operator","app.kubernetes.io/name":"ansible-awx"},"type":"NodePort"}}'
+  creationTimestamp: "2021-10-25T23:22:03Z"
+  labels:
+    app.kubernetes.io/component: awx
+    app.kubernetes.io/managed-by: awx-operator
+    app.kubernetes.io/name: ansible-awx
+    app.kubernetes.io/operator-version: 0.12.0
+    app.kubernetes.io/part-of: ansible-awx
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/operator-version: {}
+          f:app.kubernetes.io/part-of: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"6bba44bc-763b-4b0b-afd4-f0650a61b97d"}:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:spec:
+        f:externalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: Swagger-Codegen
+    operation: Update
+    time: "2021-10-25T23:22:03Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:field.cattle.io/publicEndpoints: {}
+    manager: rancher
+    operation: Update
+    time: "2021-10-25T23:22:03Z"
+  name: ansible-awx-service
+  namespace: awx-namespace
+  ownerReferences:
+  - apiVersion: awx.ansible.com/v1beta1
+    kind: AWX
+    name: ansible-awx
+    uid: 6bba44bc-763b-4b0b-afd4-f0650a61b97d
+  resourceVersion: "2446028"
+  uid: cb28e056-2e09-41bd-a1ea-97612e02fb49
+spec:
+  clusterIP: 10.43.150.255
+  clusterIPs:
+  - 10.43.150.255
+  externalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    nodePort: 31999
+    port: 80
+    protocol: TCP
+    targetPort: 8052
+  selector:
+    app.kubernetes.io/component: awx
+    app.kubernetes.io/managed-by: awx-operator
+    app.kubernetes.io/name: ansible-awx
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

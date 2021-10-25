@@ -1,0 +1,51 @@
+apiVersion: v1
+data:
+  database: YXd4
+  host: YW5zaWJsZS1hd3gtcG9zdGdyZXM=
+  password: QkNZc1dxQjZaWFp1UGY5QkpBaW10RlRWMEVsb1BjZVU=
+  port: NTQzMg==
+  type: bWFuYWdlZA==
+  username: YXd4
+kind: Secret
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"v1","kind":"Secret","metadata":{"labels":{"app.kubernetes.io/component":"awx","app.kubernetes.io/managed-by":"awx-operator","app.kubernetes.io/name":"ansible-awx","app.kubernetes.io/operator-version":"0.12.0","app.kubernetes.io/part-of":"ansible-awx"},"name":"ansible-awx-postgres-configuration","namespace":"awx-namespace"},"stringData":{"database":"awx","host":"ansible-awx-postgres","password":"BCYsWqB6ZXZuPf9BJAimtFTV0EloPceU","port":"5432","type":"managed","username":"awx"}}'
+  creationTimestamp: "2021-10-25T23:21:45Z"
+  labels:
+    app.kubernetes.io/component: awx
+    app.kubernetes.io/managed-by: awx-operator
+    app.kubernetes.io/name: ansible-awx
+    app.kubernetes.io/operator-version: 0.12.0
+    app.kubernetes.io/part-of: ansible-awx
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        .: {}
+        f:database: {}
+        f:host: {}
+        f:password: {}
+        f:port: {}
+        f:type: {}
+        f:username: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/operator-version: {}
+          f:app.kubernetes.io/part-of: {}
+      f:type: {}
+    manager: Swagger-Codegen
+    operation: Update
+    time: "2021-10-25T23:21:45Z"
+  name: ansible-awx-postgres-configuration
+  namespace: awx-namespace
+  resourceVersion: "2447795"
+  uid: 8388024d-86c9-4490-83ee-7582d48ab073
+type: Opaque

@@ -1,0 +1,284 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"apps/v1","kind":"StatefulSet","metadata":{"labels":{"app.kubernetes.io/component":"database","app.kubernetes.io/instance":"postgres-ansible-awx","app.kubernetes.io/managed-by":"awx-operator","app.kubernetes.io/name":"postgres","app.kubernetes.io/operator-version":"0.12.0","app.kubernetes.io/part-of":"ansible-awx"},"name":"ansible-awx-postgres","namespace":"awx-namespace"},"spec":{"replicas":1,"selector":{"matchLabels":{"app.kubernetes.io/component":"database","app.kubernetes.io/instance":"postgres-ansible-awx","app.kubernetes.io/managed-by":"awx-operator","app.kubernetes.io/name":"postgres"}},"serviceName":"ansible-awx","template":{"metadata":{"labels":{"app.kubernetes.io/component":"database","app.kubernetes.io/instance":"postgres-ansible-awx","app.kubernetes.io/managed-by":"awx-operator","app.kubernetes.io/name":"postgres","app.kubernetes.io/part-of":"ansible-awx"}},"spec":{"containers":[{"env":[{"name":"POSTGRESQL_DATABASE","valueFrom":{"secretKeyRef":{"key":"database","name":"ansible-awx-postgres-configuration"}}},{"name":"POSTGRESQL_USER","valueFrom":{"secretKeyRef":{"key":"username","name":"ansible-awx-postgres-configuration"}}},{"name":"POSTGRESQL_PASSWORD","valueFrom":{"secretKeyRef":{"key":"password","name":"ansible-awx-postgres-configuration"}}},{"name":"POSTGRES_DB","valueFrom":{"secretKeyRef":{"key":"database","name":"ansible-awx-postgres-configuration"}}},{"name":"POSTGRES_USER","valueFrom":{"secretKeyRef":{"key":"username","name":"ansible-awx-postgres-configuration"}}},{"name":"POSTGRES_PASSWORD","valueFrom":{"secretKeyRef":{"key":"password","name":"ansible-awx-postgres-configuration"}}},{"name":"PGDATA","value":"/var/lib/postgresql/data/pgdata"},{"name":"POSTGRES_INITDB_ARGS","value":"--auth-host=scram-sha-256"},{"name":"POSTGRES_HOST_AUTH_METHOD","value":"scram-sha-256"}],"image":"postgres:12","imagePullPolicy":"IfNotPresent","name":"postgres","ports":[{"containerPort":5432,"name":"postgres"}],"resources":{},"volumeMounts":[{"mountPath":"/var/lib/postgresql/data","name":"postgres","subPath":"data"}]}]}},"updateStrategy":{"type":"RollingUpdate"},"volumeClaimTemplates":[{"metadata":{"name":"postgres"},"spec":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"8Gi"}}}}]}}'
+  creationTimestamp: "2021-10-25T23:21:48Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: database
+    app.kubernetes.io/instance: postgres-ansible-awx
+    app.kubernetes.io/managed-by: awx-operator
+    app.kubernetes.io/name: postgres
+    app.kubernetes.io/operator-version: 0.12.0
+    app.kubernetes.io/part-of: ansible-awx
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/operator-version: {}
+          f:app.kubernetes.io/part-of: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"6bba44bc-763b-4b0b-afd4-f0650a61b97d"}:
+            .: {}
+            f:apiVersion: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:spec:
+        f:podManagementPolicy: {}
+        f:replicas: {}
+        f:revisionHistoryLimit: {}
+        f:selector: {}
+        f:serviceName: {}
+        f:template:
+          f:metadata:
+            f:labels:
+              .: {}
+              f:app.kubernetes.io/component: {}
+              f:app.kubernetes.io/instance: {}
+              f:app.kubernetes.io/managed-by: {}
+              f:app.kubernetes.io/name: {}
+              f:app.kubernetes.io/part-of: {}
+          f:spec:
+            f:containers:
+              k:{"name":"postgres"}:
+                .: {}
+                f:env:
+                  .: {}
+                  k:{"name":"PGDATA"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"POSTGRES_DB"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"POSTGRES_HOST_AUTH_METHOD"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"POSTGRES_INITDB_ARGS"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"POSTGRES_PASSWORD"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"POSTGRES_USER"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"POSTGRESQL_DATABASE"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"POSTGRESQL_PASSWORD"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"POSTGRESQL_USER"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:secretKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":5432,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:resources: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/var/lib/postgresql/data"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:subPath: {}
+            f:dnsPolicy: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:terminationGracePeriodSeconds: {}
+        f:updateStrategy:
+          f:type: {}
+        f:volumeClaimTemplates: {}
+    manager: Swagger-Codegen
+    operation: Update
+    time: "2021-10-25T23:21:48Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:collisionCount: {}
+        f:currentReplicas: {}
+        f:currentRevision: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updateRevision: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2021-10-25T23:22:19Z"
+  name: ansible-awx-postgres
+  namespace: awx-namespace
+  ownerReferences:
+  - apiVersion: awx.ansible.com/v1beta1
+    kind: AWX
+    name: ansible-awx
+    uid: 6bba44bc-763b-4b0b-afd4-f0650a61b97d
+  resourceVersion: "2446133"
+  uid: 6b6655c0-4f82-4974-99bb-eaf03fd237d1
+spec:
+  podManagementPolicy: OrderedReady
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: database
+      app.kubernetes.io/instance: postgres-ansible-awx
+      app.kubernetes.io/managed-by: awx-operator
+      app.kubernetes.io/name: postgres
+  serviceName: ansible-awx
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/component: database
+        app.kubernetes.io/instance: postgres-ansible-awx
+        app.kubernetes.io/managed-by: awx-operator
+        app.kubernetes.io/name: postgres
+        app.kubernetes.io/part-of: ansible-awx
+    spec:
+      containers:
+      - env:
+        - name: POSTGRESQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              key: database
+              name: ansible-awx-postgres-configuration
+        - name: POSTGRESQL_USER
+          valueFrom:
+            secretKeyRef:
+              key: username
+              name: ansible-awx-postgres-configuration
+        - name: POSTGRESQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: password
+              name: ansible-awx-postgres-configuration
+        - name: POSTGRES_DB
+          valueFrom:
+            secretKeyRef:
+              key: database
+              name: ansible-awx-postgres-configuration
+        - name: POSTGRES_USER
+          valueFrom:
+            secretKeyRef:
+              key: username
+              name: ansible-awx-postgres-configuration
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: password
+              name: ansible-awx-postgres-configuration
+        - name: PGDATA
+          value: /var/lib/postgresql/data/pgdata
+        - name: POSTGRES_INITDB_ARGS
+          value: --auth-host=scram-sha-256
+        - name: POSTGRES_HOST_AUTH_METHOD
+          value: scram-sha-256
+        image: postgres:12
+        imagePullPolicy: IfNotPresent
+        name: postgres
+        ports:
+        - containerPort: 5432
+          name: postgres
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/postgresql/data
+          name: postgres
+          subPath: data
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  updateStrategy:
+    type: RollingUpdate
+  volumeClaimTemplates:
+  - apiVersion: v1
+    kind: PersistentVolumeClaim
+    metadata:
+      creationTimestamp: null
+      name: postgres
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 8Gi
+      volumeMode: Filesystem
+    status:
+      phase: Pending
+status:
+  collisionCount: 0
+  currentReplicas: 1
+  currentRevision: ansible-awx-postgres-655bb96668
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updateRevision: ansible-awx-postgres-655bb96668
+  updatedReplicas: 1
