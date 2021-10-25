@@ -1,9 +1,9 @@
 ---
 apiVersion: awx.ansible.com/v1beta1
 kind: AWX
-namespace: awx-namespace
 metadata:
   name: ansible-awx
+  namespace: awx-namespace  
 spec:
   service_type: nodeport
   ingress_type: none
