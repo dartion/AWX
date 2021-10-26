@@ -4,6 +4,7 @@ metadata:
   name: awx
   namespace: awx-namespace
   labels:
+    # service
     service: ansible-awx-service
     
 spec:
