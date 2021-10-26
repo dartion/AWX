@@ -690,6 +690,7 @@ kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: awx-operator  
+  namespace: awx-namespace
 subjects:
   - kind: ServiceAccount
     name: awx-operator    
@@ -718,6 +719,7 @@ spec:
       name: awx-operator
   template:
     metadata:
+      namespace: awx-namespace
       labels:
         name: awx-operator
     spec:
