@@ -78,8 +78,8 @@ spec:
                     - loadbalancer
                     - ClusterIP
                     - clusterip
-                    - NodePort
-                    - nodeport
+#                    - NodePort
+#                    - nodeport
                 ingress_type:
                   description: The ingress type to use to reach the deployed instance
                   type: string
