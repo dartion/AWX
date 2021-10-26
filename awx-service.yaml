@@ -11,6 +11,6 @@ spec:
     app: ansible-awx-service
   type: LoadBalancer
   ports:
-  - port: 5000
-    targetPort: 80
+  - port: 80
+    targetPort: 5000
 #    nodePort: 30036
