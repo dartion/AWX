@@ -601,10 +601,10 @@ spec:
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
-namespace: awx-namespace
 metadata:
   creationTimestamp: null
   name: awx-operator
+  namespace: awx-namespace
 rules:
   - apiGroups:
       - route.openshift.io
