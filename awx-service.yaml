@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: AWX
+  name: awx
   labels:
     service: ansible_awx_service
 spec:
