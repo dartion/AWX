@@ -693,7 +693,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: awx-operator
-    namespace: awx-namespace
+    namespace: awx-namespace  
 roleRef:
   kind: ClusterRole
   name: awx-operator
