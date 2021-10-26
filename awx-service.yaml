@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: AWX
   labels:
-    service: ansible-awx-service
+    service: ansible_awx_service
 spec:
   selector:
     app: ansible-awx-service
