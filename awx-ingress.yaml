@@ -26,7 +26,6 @@ spec:
   defaultBackend:
     service:
       name: ansible-awx-service
-      port:
-        number: 31363
+      port: 31363
 
 
