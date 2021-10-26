@@ -5,6 +5,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   name: awxs.awx.ansible.com
+  namespace: awx-namespace
 spec:
   group: awx.ansible.com
   names:
@@ -441,6 +442,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   name: awxbackups.awx.ansible.com
+  namespace: awx-namespace
 spec:
   group: awx.ansible.com
   names:
@@ -520,6 +522,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   name: awxrestores.awx.ansible.com
+  namespace: awx-namespace
 spec:
   group: awx.ansible.com
   names:
@@ -598,6 +601,7 @@ spec:
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
+namespace: awx-namespace
 metadata:
   creationTimestamp: null
   name: awx-operator
@@ -686,6 +690,7 @@ kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: awx-operator
+  namespace: awx-namespace
 subjects:
   - kind: ServiceAccount
     name: awx-operator
@@ -707,6 +712,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: awx-operator
+  namespace: awx-namespace
 spec:
   replicas: 1
   selector:
