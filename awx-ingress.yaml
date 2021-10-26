@@ -1,34 +1,3 @@
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: awx-ingress
-#   annotations:
-#     kubernetes.io/ingress.class: "nginx"
-#     cert-manager.io/issuer: "letsencrypt-prod"
-#     nginx.ingress.kubernetes.io/ssl-redirect: "true"
-#     nginx.ingress.kubernetes.io/configuration-snippet: |
-#       if ($http_x_forwarded_proto = 'http') {
-#         return 301 https://$host$request_uri;
-#       }
-
-
-# spec:
-#   tls:
-#   - hosts:
-#     - darshan.intersect.org.au
-#     secretName: awx-ssl
-#   rules:
-#   - host: darshan.intersect.org.au
-#     http:
-#      paths:
-#      - path: /
-#        pathType: Prefix
-#        backend:
-#         service:
-#           name: ansible-awx-service
-#           port: 31363
-
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -42,7 +11,12 @@ metadata:
         return 301 https://$host$request_uri;
       }
 
+
 spec:
+  tls:
+  - hosts:
+    - darshan.intersect.org.au
+    secretName: awx-ssl
   rules:
   - host: darshan.intersect.org.au
     http:
@@ -53,4 +27,5 @@ spec:
           service:
             name: ansible-awx-service
             port: 
-              number: 31363
+              number: 31363  
+
