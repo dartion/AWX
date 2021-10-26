@@ -15,10 +15,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - dartion.in
+    - darshan.intersect.org.au
     secretName: awx-ssl
   rules:
-  - host: dartion.in
+  - host: darshan.intersect.org.au
 #    http:
     #  paths:
     #  - path: /
