@@ -10,8 +10,6 @@ spec:
   selector:
     app: ansible-awx-service
   type: LoadBalancer
-#  type: NodePort
-#  type: ClusterIP
   ports:
   - port: 5000
     targetPort: 80
