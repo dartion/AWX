@@ -4,7 +4,7 @@ metadata:
   name: awx
   namespace: awx-namespace
   labels:
-    service: ansible_awx_service
+    service: ansible-awx-service
     
 spec:
   selector:
@@ -12,5 +12,5 @@ spec:
   type: LoadBalancer
   # port mapping
   ports:
-  - port: 80
-    targetPort: 5000
+  - port: 5000
+    targetPort: 80
