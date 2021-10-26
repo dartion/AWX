@@ -13,10 +13,10 @@ metadata:
 
 
 spec:
-  tls:
-  - hosts:
-    - darshan.intersect.org.au
-    secretName: awx-ssl
+#   tls:
+#   - hosts:
+#     - darshan.intersect.org.au
+#     secretName: awx-ssl
   rules:
   - host: darshan.intersect.org.au
     http:
