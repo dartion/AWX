@@ -19,7 +19,7 @@ spec:
     secretName: awx-ssl
   rules:
   - host: darshan.intersect.org.au
-   http:
+    http:
      paths:
      - path: /
        pathType: Prefix
