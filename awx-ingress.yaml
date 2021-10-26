@@ -23,7 +23,7 @@ spec:
 #      paths:
 #      - path: /
 #        pathType: Prefix
-  defaultBackend:
+  backend:
     service:
       name: ansible-awx-service
       port: 31363
