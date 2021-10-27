@@ -5,7 +5,7 @@ metadata:
   name: ansible-awx
   namespace: awx-namespace  
 spec:
-  service_type: nodeport
+  service_type: LoadBalancer
   ingress_type: none
   hostname: ansible-awx.example.com
 
