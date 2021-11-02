@@ -80,9 +80,6 @@ spec:
                     - clusterip
                     - NodePort
                     - nodeport
-                  spec:
-                    externalIPs:
-                      - 192.168.144.201
                 ingress_type:
                   description: The ingress type to use to reach the deployed instance
                   type: string
