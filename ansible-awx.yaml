@@ -7,5 +7,4 @@ metadata:
 spec:
   service_type: NodePort
   ingress_type: none
-  externalIPs:
-    - 192.168.144.201
+  
