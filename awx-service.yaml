@@ -4,8 +4,7 @@ metadata:
   name: awx
   namespace: awx-namespace
   labels:
-    # Service running the backend
-    service: ansible-awx-service
+    service: ansible-awx-service-map
     
 spec:
   selector:
@@ -14,12 +13,12 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 9376
+      targetPort: 8081
   type: LoadBalancer
 status:
   loadBalancer:
     ingress:
-    - ip: 192.0.2.127
+    - ip: 192.168.144.201
 
 # ports:
 #   - port: 5000
