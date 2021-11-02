@@ -110,7 +110,7 @@ spec:
                 loadbalancer_port:
                   description: Port to use for the loadbalancer
                   type: integer
-                  default: 8081
+                  default: 80
                 route_host:
                   description: The DNS to use to points to the instance
                   type: string
