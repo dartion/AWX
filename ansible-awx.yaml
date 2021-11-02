@@ -8,5 +8,5 @@ spec:
   service_type: NodePort
   ingress_type: none
   hostname: 192.168.144.201
-###
-#Adding comment
+  externalIPs:
+    - 192.168.144.201
