@@ -43,6 +43,9 @@ spec:
                   description: Username to use for the admin account
                   type: string
                   default: admin
+                externalIPs:
+                  description: External IP provided by SDC
+                  type: string
                 hostname:
                   description: The hostname of the instance
                   type: string
