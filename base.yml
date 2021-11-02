@@ -82,7 +82,7 @@ spec:
                     - nodeport
                 external_ips:
                   description: External IP provided by SDC
-                  type: string
+                  type: external-ip
                 ingress_type:
                   description: The ingress type to use to reach the deployed instance
                   type: string
