@@ -11,7 +11,16 @@ spec:
   selector:
     app: ansible-awx-service
   type: LoadBalancer
-  # port mapping
   ports:
-  - port: 5000
-    targetPort: 80
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 192.0.2.127
+
+# ports:
+#   - port: 5000
+#     targetPort: 80
