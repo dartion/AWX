@@ -80,9 +80,6 @@ spec:
                     - clusterip
                     - NodePort
                     - nodeport
-                external_ips:
-                  description: External IP provided by SDC
-                  type: external-ip
                 ingress_type:
                   description: The ingress type to use to reach the deployed instance
                   type: string
