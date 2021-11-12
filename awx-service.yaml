@@ -8,8 +8,7 @@ metadata:
     
 spec:
   selector:
-    app: ansible-awx-service
-  type: LoadBalancer
+    app: ansible-awx-service  
   ports:
     - protocol: TCP
       port: 40001
