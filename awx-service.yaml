@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: awx
+  name: awx-forward-service
   namespace: awx-namespace
   labels:
     service: ansible-awx-service-map
     
 spec:
   selector:
-    app: ansible-awx-service-forwarding
+    app: ansible-awx-service
   type: LoadBalancer
   ports:
     - protocol: TCP
