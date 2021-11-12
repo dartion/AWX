@@ -4,7 +4,7 @@ metadata:
   name: awx-forward-service
   namespace: awx-namespace
   labels:
-    service: ansible-awx-service-map
+    service: awx-forward-service
     
 spec:
   selector:
@@ -12,7 +12,7 @@ spec:
   ports:
     - protocol: TCP
       port: 40001
-      targetPort: 80
+      targetPort: 30590
   type: LoadBalancer
 
 # ports:
