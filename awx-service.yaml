@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: awx-forward-service
+  namespace: awx-namespace
 spec:
   type: NodePort
   selector:
