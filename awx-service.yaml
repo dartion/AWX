@@ -6,10 +6,10 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: MyApp
+    app: ansible-awx-service
   ports:
-    - port: 80
-      targetPort: 40001
+    - port: 40001
+      targetPort: 80
       # Optional field
       # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
 
