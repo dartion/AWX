@@ -9,7 +9,7 @@ spec:
     app: ansible-awx-service
   ports:
     - port: 40001
-      targetPort: 80
+      targetPort: http
       # Optional field
       # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
 
