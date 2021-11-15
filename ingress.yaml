@@ -16,7 +16,7 @@ spec:
           service:
             name: ansible-awx-service
             port:
-                number: 40001
+                number: 80
 #   rules:
 #   - host: portal.irs.environment.nsw.gov.au/awx
 #     http:
