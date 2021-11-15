@@ -16,5 +16,4 @@ spec:
           service:
             name: ansible-awx-service
             port:
-              number: 80
-              targetPort: 80
+              number: 80             
