@@ -7,10 +7,10 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: portal.irs.environment.nsw.gov.au/awx
+  - host: portal.irs.environment.nsw.gov.au
     http:
       paths:
-      - path: /
+      - path: /awx
         pathType: Prefix
         backend:
           service:
