@@ -1,0 +1,431 @@
+apiVersion: management.cattle.io/v3
+kind: Cluster
+metadata:
+  annotations:
+    authz.management.cattle.io/creator-role-bindings: '{"created":["cluster-owner"],"required":["cluster-owner"]}'
+    field.cattle.io/creatorId: user-l9hr5
+    lifecycle.cattle.io/create.cluster-agent-controller-cleanup: "true"
+    lifecycle.cattle.io/create.cluster-provisioner-controller: "true"
+    lifecycle.cattle.io/create.cluster-scoped-gc: "true"
+    lifecycle.cattle.io/create.mgmt-cluster-rbac-remove: "true"
+    provisioner.cattle.io/ke-driver-update: updated
+  creationTimestamp: "2021-11-23T01:00:12Z"
+  finalizers:
+  - controller.cattle.io/cluster-agent-controller-cleanup
+  - controller.cattle.io/cluster-scoped-gc
+  - controller.cattle.io/cluster-provisioner-controller
+  - controller.cattle.io/mgmt-cluster-rbac-remove
+  - wrangler.cattle.io/mgmt-cluster-remove
+  generateName: c-
+  generation: 184
+  labels:
+    cattle.io/creator: norman
+    provider.cattle.io: rke
+  managedFields:
+  - apiVersion: management.cattle.io/v3
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:field.cattle.io/creatorId: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:cattle.io/creator: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2021-11-23T01:10:38Z"
+  - apiVersion: management.cattle.io/v3
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:authz.management.cattle.io/creator-role-bindings: {}
+          f:lifecycle.cattle.io/create.cluster-agent-controller-cleanup: {}
+          f:lifecycle.cattle.io/create.cluster-provisioner-controller: {}
+          f:lifecycle.cattle.io/create.cluster-scoped-gc: {}
+          f:lifecycle.cattle.io/create.mgmt-cluster-rbac-remove: {}
+          f:provisioner.cattle.io/ke-driver-update: {}
+        f:finalizers:
+          .: {}
+          v:"controller.cattle.io/cluster-agent-controller-cleanup": {}
+          v:"controller.cattle.io/cluster-provisioner-controller": {}
+          v:"controller.cattle.io/cluster-scoped-gc": {}
+          v:"controller.cattle.io/mgmt-cluster-rbac-remove": {}
+          v:"wrangler.cattle.io/mgmt-cluster-remove": {}
+        f:labels:
+          f:provider.cattle.io: {}
+      f:spec: {}
+      f:status: {}
+    manager: rancher
+    operation: Update
+    time: "2021-11-23T01:29:40Z"
+  name: c-xftht
+  resourceVersion: "2661411"
+  uid: 9fedd93a-96ba-4984-bd0d-359048ac27ef
+spec:
+  agentImageOverride: ""
+  answers: {}
+  description: ""
+  desiredAgentImage: ""
+  desiredAuthImage: ""
+  displayName: rancher-qa
+  dockerRootDir: /var/lib/docker
+  enableClusterAlerting: false
+  enableClusterMonitoring: false
+  enableNetworkPolicy: false
+  fleetWorkspaceName: fleet-default
+  internal: false
+  localClusterAuthEndpoint:
+    enabled: true
+  rancherKubernetesEngineConfig:
+    addonJobTimeout: 45
+    authentication:
+      strategy: x509|webhook
+    authorization: {}
+    bastionHost: {}
+    cloudProvider:
+      name: openstack
+      openstackCloudProvider:
+        global:
+          username: darshan@intersect.org.au
+          password: MDI5ZWM4YzljNDcwNmI5
+          auth-url: https://keystone.rc.nectar.org.au:5000/v3/
+          tenant-id:  18dbb1b74fa349caa25a02c9507bf680
+          domain-id: default
+    dns:
+      nodelocal: {}
+    enableCriDockerd: false
+    ignoreDockerVersion: true
+    ingress:
+      defaultBackend: false
+      provider: nginx
+    kubernetesVersion: v1.21.6-rancher1-1
+    monitoring:
+      provider: metrics-server
+      replicas: 1
+    network:
+      options:
+        flannel_backend_type: vxlan
+      plugin: canal
+    restore: {}
+    rotateEncryptionKey: false
+    services:
+      etcd:
+        backupConfig:
+          enabled: true
+          intervalHours: 12
+          retention: 6
+          s3BackupConfig: null
+          timeout: 300
+        creation: 12h
+        extraArgs:
+          election-timeout: "5000"
+          heartbeat-interval: "500"
+        retention: 72h
+        snapshot: false
+      kubeApi:
+        secretsEncryptionConfig: {}
+        serviceNodePortRange: 30000-32767
+      kubeController: {}
+      kubelet: {}
+      kubeproxy: {}
+      scheduler: {}
+    sshAgentAuth: false
+    systemImages: {}
+    upgradeStrategy:
+      drain: false
+      maxUnavailableControlplane: "1"
+      maxUnavailableWorker: 10%
+      nodeDrainInput:
+        gracePeriod: -1
+        ignoreDaemonSets: true
+        timeout: 120
+  scheduledClusterScan: {}
+  windowsPreferedCluster: false
+status:
+  agentFeatures:
+    embedded-cluster-api: false
+    fleet: false
+    monitoringv1: false
+    multi-cluster-management: false
+    multi-cluster-management-agent: true
+    provisioningv2: false
+    rke2: false
+  agentImage: rancher/rancher-agent:v2.6.2
+  aksStatus:
+    privateRequiresTunnel: null
+    rbacEnabled: null
+    upstreamSpec: null
+  allocatable:
+    cpu: "2"
+    memory: 3928140Ki
+    pods: "110"
+  apiEndpoint: https://203.100.30.180:6443
+  appliedEnableNetworkPolicy: false
+  appliedPodSecurityPolicyTemplateId: ""
+  appliedSpec:
+    agentImageOverride: ""
+    answers: {}
+    description: ""
+    desiredAgentImage: ""
+    desiredAuthImage: ""
+    displayName: rancher-qa
+    dockerRootDir: /var/lib/docker
+    enableClusterAlerting: false
+    enableClusterMonitoring: false
+    enableNetworkPolicy: false
+    fleetWorkspaceName: fleet-default
+    internal: false
+    localClusterAuthEndpoint:
+      enabled: true
+    rancherKubernetesEngineConfig:
+      addonJobTimeout: 45
+      authentication:
+        strategy: x509|webhook
+      authorization: {}
+      bastionHost: {}
+      cloudProvider: {}
+      dns:
+        nodelocal: {}
+      enableCriDockerd: false
+      ignoreDockerVersion: true
+      ingress:
+        defaultBackend: false
+        provider: nginx
+      kubernetesVersion: v1.21.6-rancher1-1
+      monitoring:
+        provider: metrics-server
+        replicas: 1
+      network:
+        options:
+          flannel_backend_type: vxlan
+        plugin: canal
+      nodes:
+      - address: 203.100.30.180
+        hostnameOverride: rancher-qa1
+        labels:
+          cattle.io/creator: norman
+        nodeName: c-xftht:m-lpw9b
+        port: "22"
+        role:
+        - etcd
+        - controlplane
+        - worker
+        user: ubuntu
+      restore: {}
+      rotateEncryptionKey: false
+      services:
+        etcd:
+          backupConfig:
+            enabled: true
+            intervalHours: 12
+            retention: 6
+            s3BackupConfig: null
+            timeout: 300
+          creation: 12h
+          extraArgs:
+            election-timeout: "5000"
+            heartbeat-interval: "500"
+          retention: 72h
+          snapshot: false
+        kubeApi:
+          secretsEncryptionConfig: {}
+          serviceNodePortRange: 30000-32767
+        kubeController: {}
+        kubelet: {}
+        kubeproxy: {}
+        scheduler: {}
+      sshAgentAuth: false
+      systemImages:
+        aciCniDeployContainer: noiro/cnideploy:5.1.1.0.1ae238a
+        aciControllerContainer: noiro/aci-containers-controller:5.1.1.0.1ae238a
+        aciGbpServerContainer: noiro/gbp-server:5.1.1.0.1ae238a
+        aciHostContainer: noiro/aci-containers-host:5.1.1.0.1ae238a
+        aciMcastContainer: noiro/opflex:5.1.1.0.1ae238a
+        aciOpflexContainer: noiro/opflex:5.1.1.0.1ae238a
+        aciOpflexServerContainer: noiro/opflex-server:5.1.1.0.1ae238a
+        aciOvsContainer: noiro/openvswitch:5.1.1.0.1ae238a
+        alpine: rancher/rke-tools:v0.1.78
+        calicoCni: rancher/mirrored-calico-cni:v3.19.2
+        calicoControllers: rancher/mirrored-calico-kube-controllers:v3.19.2
+        calicoCtl: rancher/mirrored-calico-ctl:v3.19.2
+        calicoFlexVol: rancher/mirrored-calico-pod2daemon-flexvol:v3.19.2
+        calicoNode: rancher/mirrored-calico-node:v3.19.2
+        canalCni: rancher/mirrored-calico-cni:v3.19.2
+        canalControllers: rancher/mirrored-calico-kube-controllers:v3.19.2
+        canalFlannel: rancher/mirrored-coreos-flannel:v0.14.0
+        canalFlexVol: rancher/mirrored-calico-pod2daemon-flexvol:v3.19.2
+        canalNode: rancher/mirrored-calico-node:v3.19.2
+        certDownloader: rancher/rke-tools:v0.1.78
+        coredns: rancher/mirrored-coredns-coredns:1.8.4
+        corednsAutoscaler: rancher/mirrored-cluster-proportional-autoscaler:1.8.3
+        dnsmasq: rancher/mirrored-k8s-dns-dnsmasq-nanny:1.17.4
+        etcd: rancher/mirrored-coreos-etcd:v3.4.16-rancher1
+        flannel: rancher/mirrored-coreos-flannel:v0.14.0
+        flannelCni: rancher/flannel-cni:v0.3.0-rancher6
+        ingress: rancher/nginx-ingress-controller:nginx-0.49.3-rancher1
+        ingressBackend: rancher/mirrored-nginx-ingress-controller-defaultbackend:1.5-rancher1
+        ingressWebhook: rancher/mirrored-ingress-nginx-kube-webhook-certgen:v1.1.1
+        kubedns: rancher/mirrored-k8s-dns-kube-dns:1.17.4
+        kubednsAutoscaler: rancher/mirrored-cluster-proportional-autoscaler:1.8.3
+        kubednsSidecar: rancher/mirrored-k8s-dns-sidecar:1.17.4
+        kubernetes: rancher/hyperkube:v1.21.6-rancher1
+        kubernetesServicesSidecar: rancher/rke-tools:v0.1.78
+        metricsServer: rancher/mirrored-metrics-server:v0.5.0
+        nginxProxy: rancher/rke-tools:v0.1.78
+        nodelocal: rancher/mirrored-k8s-dns-node-cache:1.18.0
+        podInfraContainer: rancher/mirrored-pause:3.4.1
+        weaveCni: weaveworks/weave-npc:2.8.1
+        weaveNode: weaveworks/weave-kube:2.8.1
+        windowsPodInfraContainer: rancher/kubelet-pause:v0.1.6
+      upgradeStrategy:
+        drain: false
+        maxUnavailableControlplane: "1"
+        maxUnavailableWorker: 10%
+        nodeDrainInput:
+          gracePeriod: -1
+          ignoreDaemonSets: true
+          timeout: 120
+    scheduledClusterScan: {}
+    windowsPreferedCluster: false
+  authImage: rancher/kube-api-auth:v0.1.5
+  caCert: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM0VENDQWNtZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFTTVJBd0RnWURWUVFERXdkcmRXSmwKTFdOaE1CNFhEVEl4TVRFeU16QXhNall4TjFvWERUTXhNVEV5TVRBeE1qWXhOMW93RWpFUU1BNEdBMVVFQXhNSAphM1ZpWlMxallUQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ0VCQUtGNDUzQ2s3UXp6CnNyQStranhpaVRQcm1Lbm82NENVblcrSmJPakJoOGQvY0xaQURBM2gvQlNYUEp3TWxmZi9tc2hDU2hVSzRydjgKVlE5N3loT3pjMVZNQ1FKb3Z4Y3FPdC9ZYVBQRWV6QWNmdmtIYWFreDhYaWFsR0UyanRtQWptZE16aGR0OXlBRAovQi9JM1BBd1hQbFV1cXo5aHoxdkxCWFNDeWtpa0N5TTJyZU4yVCtBcnVQSDdKTk0vVEJCS2prUzFBb01XTm8zClVyZ242WU0vOTJoQVduaE5kS0g4ZGpBcDR2bFhrbzhBbHVkSzdIUmhBT2N3OGx0dzgrSVJOTlBTUXN6QnEyTE4KeXhNSzVIUDJBL0R1aEJGNENaS3FBWHh2aTNCcml3bjJtQ3k1NnI1eExUU2tEdUNDWTAwYzl2cjB5S3gvY1FReQpzcVhBeitLZmdGVUNBd0VBQWFOQ01FQXdEZ1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93UUZNQU1CCkFmOHdIUVlEVlIwT0JCWUVGQXFlNWxKWGpXejNTTXlBNGxsNGxBeVJ6eDBsTUEwR0NTcUdTSWIzRFFFQkN3VUEKQTRJQkFRQXpBOHhhdjhRbmdZWVFLNUg5S3J0cUk0OUxQOGlvZldyR09yZGYvaG1HT2liQlpVazByZW9OMmd0TgpjUWhMeS9MdDIyekZpQVhCOGQyT2Zyb1dzT2VEZTNZdzlTQUFta0daQ1pubUlqK1crdExUSWI2RzVmQ21IcTlvCjdFei9mSEVlSjdvYzU5eURPNyswRVliaTgxby9SQmtRaHc5UnpuQTFualV2QmVCTHdSSlF0bEhPUGd0T2hhVUUKUy8zZGdZWXBJRDhCZTk4UStLSGpCM2l3UVR1NGtkOEdPQk9PRU5pbmJqR3R0ejIwcVdYUUtsKzNDbk1yMzhkMwpzUlBkZ1pOY1JHRkZJd0Q4MkRWbWZ6d1pXd2t5RnpuYlRSRnh3S2FHZEFVYTFFYVY2UUw1eFh6U25mQ3pGZ3ZCClJpTFNxazRlZ1VxSVBsdWhmUysvaGhtSjBjZUUKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+  capabilities:
+    ingressCapabilities:
+    - customDefaultBackend: false
+      ingressProvider: nginx
+    loadBalancerCapabilities: {}
+    nodePoolScalingSupported: true
+    nodePortRange: 30000-32767
+    taintSupport: true
+  capacity:
+    cpu: "2"
+    memory: 4030540Ki
+    pods: "110"
+  certificatesExpiration:
+    kube-apiserver:
+      expirationDate: "2031-11-21T01:26:18Z"
+    kube-apiserver-proxy-client:
+      expirationDate: "2031-11-21T01:26:20Z"
+    kube-ca:
+      expirationDate: "2031-11-21T01:26:17Z"
+    kube-controller-manager:
+      expirationDate: "2031-11-21T01:26:18Z"
+    kube-etcd-203-100-30-180:
+      expirationDate: "2031-11-21T01:26:20Z"
+    kube-node:
+      expirationDate: "2031-11-21T01:26:19Z"
+    kube-proxy:
+      expirationDate: "2031-11-21T01:26:19Z"
+    kube-scheduler:
+      expirationDate: "2031-11-21T01:26:19Z"
+  componentStatuses:
+  - conditions:
+    - message: ok
+      status: "True"
+      type: Healthy
+    name: controller-manager
+  - conditions:
+    - message: '{"health":"true"}'
+      status: "True"
+      type: Healthy
+    name: etcd-0
+  - conditions:
+    - message: ok
+      status: "True"
+      type: Healthy
+    name: scheduler
+  conditions:
+  - status: "True"
+    type: Pending
+  - lastUpdateTime: "2021-11-23T01:29:04Z"
+    status: "True"
+    type: Provisioned
+  - lastUpdateTime: "2021-11-23T01:29:19Z"
+    status: "True"
+    type: Waiting
+  - lastUpdateTime: "2021-11-23T01:00:12Z"
+    status: "True"
+    type: BackingNamespaceCreated
+  - lastUpdateTime: "2021-11-23T01:00:12Z"
+    status: "True"
+    type: DefaultProjectCreated
+  - lastUpdateTime: "2021-11-23T01:00:12Z"
+    status: "True"
+    type: SystemProjectCreated
+  - lastUpdateTime: "2021-11-23T01:00:12Z"
+    status: "True"
+    type: InitialRolesPopulated
+  - lastUpdateTime: "2021-11-23T01:00:13Z"
+    status: "True"
+    type: CreatorMadeOwner
+  - lastUpdateTime: "2021-11-23T01:00:14Z"
+    status: "True"
+    type: NoDiskPressure
+  - lastUpdateTime: "2021-11-23T01:00:14Z"
+    status: "True"
+    type: NoMemoryPressure
+  - lastUpdateTime: "2021-11-23T01:30:35Z"
+    status: "True"
+    type: Connected
+  - lastUpdateTime: "2021-11-23T01:29:08Z"
+    status: "False"
+    type: AlertingEnabled
+  - lastUpdateTime: "2021-11-23T01:29:15Z"
+    status: "True"
+    type: SystemAccountCreated
+  - lastUpdateTime: "2021-11-23T01:29:17Z"
+    status: "True"
+    type: AgentDeployed
+  - lastUpdateTime: "2021-11-23T01:29:19Z"
+    status: "True"
+    type: Ready
+  - lastUpdateTime: "2021-11-23T01:29:22Z"
+    status: "False"
+    type: PrometheusOperatorDeployed
+  - lastUpdateTime: "2021-11-23T01:29:40Z"
+    status: "True"
+    type: Updated
+  - lastUpdateTime: "2021-11-23T01:29:35Z"
+    status: "True"
+    type: ServiceAccountMigrated
+  - lastUpdateTime: "2021-11-23T01:29:40Z"
+    status: "True"
+    type: GlobalAdminsSynced
+  driver: rancherKubernetesEngine
+  eksStatus:
+    managedLaunchTemplateID: ""
+    managedLaunchTemplateVersions: null
+    privateRequiresTunnel: null
+    securityGroups: null
+    subnets: null
+    upstreamSpec: null
+    virtualNetwork: ""
+  gkeStatus:
+    privateRequiresTunnel: null
+    upstreamSpec: null
+  limits:
+    cpu: "0"
+    memory: 170Mi
+    pods: "0"
+  linuxWorkerCount: 1
+  nodeCount: 1
+  nodeVersion: 1
+  provider: rke
+  requested:
+    cpu: 470m
+    memory: 280Mi
+    pods: "12"
+  serviceAccountToken: eyJhbGciOiJSUzI1NiIsImtpZCI6IllnTWZoaENZREg0VHY0dVROVVdSUWdBam9CRjQ5QmRtOEFycWdXQVY2Q1kifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJjYXR0bGUtc3lzdGVtIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImtvbnRhaW5lci1lbmdpbmUtdG9rZW4tZjhnZzQiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoia29udGFpbmVyLWVuZ2luZSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6ImQ4NzA0ZTZiLThjMGItNDg2MS1iN2Q3LTIwYzZlYjFhZTM3MSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpjYXR0bGUtc3lzdGVtOmtvbnRhaW5lci1lbmdpbmUifQ.mVGkRIs2wEzpapbzvLbL0kw-yISr12A34czrdMCQTP8DTFHHmXePRUJqoAjs_2SiJ4gjOVJGhNzNjThToaBV26TT_AmGL_fuZb2VbD95SOIbpZd5PeYM9qlonu8p8IFNppsfZnqsrKdl34sVBkukmUoVA37v6fXoKWNb4-2yRqRqTNapbqjjHTBNUu74W5of6QtqX9iXL2tFHNjIL_ANfC0LwGHq_ubswHkeWxkYv6RXu4jqSBfNxjPRCnu9MET33YzShX6Bcw6qB0XXwT4sQqEFpu8gJOUVRFr1bxix5XIkqMkKPpWxRX4LQh5KBx0OTQfB2aQYsQHT1KWlGbhMnw
+  version:
+    buildDate: "2021-10-27T17:44:26Z"
+    compiler: gc
+    gitCommit: d921bc6d1810da51177fbd0ed61dc811c5228097
+    gitTreeState: clean
+    gitVersion: v1.21.6
+    goVersion: go1.16.9
+    major: "1"
+    minor: "21"
+    platform: linux/amd64
