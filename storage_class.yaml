@@ -1,23 +1,23 @@
-# apiVersion: storage.k8s.io/v1
-# kind: StorageClass
-# metadata:
-#   name: default
-#   annotations:
-#     storageclass.kubernetes.io/is-default-class: "true"
-# parameters:
-#   availability: intersect
-# provisioner: cinder.csi.openstack.org
-
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: cinder
+  name: default
   annotations:
     storageclass.kubernetes.io/is-default-class: "true"
-provisioner: kubernetes.io/cinder
-reclaimPolicy: Delete
 parameters:
   availability: intersect
+provisioner: cinder.csi.openstack.org
+
+# apiVersion: storage.k8s.io/v1
+# kind: StorageClass
+# metadata:
+#   name: cinder
+#   annotations:
+#     storageclass.kubernetes.io/is-default-class: "true"
+# provisioner: kubernetes.io/cinder
+# reclaimPolicy: Delete
+# parameters:
+#   availability: intersect
   
 # apiVersion: storage.k8s.io/v1
 # kind: StorageClass
